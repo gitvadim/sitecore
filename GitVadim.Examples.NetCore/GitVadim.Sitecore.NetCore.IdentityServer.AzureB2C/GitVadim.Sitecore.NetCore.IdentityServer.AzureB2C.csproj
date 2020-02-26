@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="Sitecore.Framework.Runtime.Build" />
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="global.json" />
+    <None Remove="sitecore\GitVadim.Sitecore.NetCore.IdentityServer.AzureB2C\Config\GitVadim.Sitecore.NetCore.IdentityServer.AzureB2C.xml" />
+    <None Remove="sitecore\GitVadim.Sitecore.NetCore.IdentityServer.AzureB2C\Sitecore.Plugin.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="global.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sitecore\GitVadim.Sitecore.NetCore.IdentityServer.AzureB2C\Config\GitVadim.Sitecore.NetCore.IdentityServer.AzureB2C.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sitecore\GitVadim.Sitecore.NetCore.IdentityServer.AzureB2C\Sitecore.Plugin.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Sitecore.Framework.Runtime.Abstractions" Version="4.1.0" />
+    <PackageReference Include="Sitecore.Plugin.IdentityProviders" Version="3.0.0" />
+  </ItemGroup>
+
+</Project>
